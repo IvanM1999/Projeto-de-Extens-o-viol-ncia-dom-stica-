@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: site-violencia-domestica
+    env: node
+    region: oregon
+    plan: free
+    buildCommand: "npm install"
+    startCommand: "npm start"
+    autoDeploy: true
+    envVars:
+      NODE_VERSION: 18
