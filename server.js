@@ -1,15 +1,19 @@
 const express = require('express');
 const path = require('path');
-
 const app = express();
-const port = process.env.PORT || 4000;
 
-app.use(express.static(path.join(__dirname, 'SITE')));
+// Porta padrão ou definida pelo ambiente
+const PORT = process.env.PORT || 3000;
 
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'SITE', 'index.html'));
+// Servir arquivos estáticos (CSS, imagens, JS)
+app.use(express.static(path.join(__dirname)));
+
+// Rota principal
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`);
+// Inicialização do servidor
+app.listen(PORT, () => {
+  console.log(`Servidor rodando em http://localhost:${PORT}`);
 });

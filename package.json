@@ -1,15 +1,14 @@
 {
-  "name": "ct-bnu-uniasselvi-site",
+  "name": "site-violencia-domestica",
   "version": "1.0.0",
-  "description": "Site do Conselho Tutelar - Uniasselvi",
-  "main": "server.js",
+  "description": "Site informativo e canal de denúncias sobre violência doméstica em Blumenau",
+  "main": "serve.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node serve.js"
   },
+  "author": "Ivan",
+  "license": "MIT",
   "dependencies": {
     "express": "^4.18.2"
-  },
-  "engines": {
-    "node": ">=18.0.0"
   }
 }
